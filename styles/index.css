@@ -1,0 +1,35 @@
+@import 'sign-in.css';
+@import 'sign-up.css';
+@import 'build-meal.css';
+@import 'meal-history.css';
+@import 'find-foods.css';
+
+body, html{
+  margin: 0px;
+  padding: 0px;
+}
+
+body > section { display:none; }
+
+body.sign-in           > section#sign-in,
+body.sign-up           > section#sign-up,
+body.build-meal           > section#build-meal,
+body.meal-history    > section#meal-history,
+body.find-foods > section#find-foods { display:block; }
+
+nav     { background:#555; padding:10px 10px 0 10px; }
+nav > a.button {  color: white;  }
+nav > a.button:hover {  color: white;  }
+.logout.button{float: right;}
+
+body.sign-in           > nav > a[href="#sign-in"],
+body.sign-up           > nav > a[href="#sign-up"],
+body.build-meal           > nav > a[href="#build-meal"],
+body.meal-history           > nav > a[href="#meal-history"],
+body.find-foods           > nav > a[href="#find-foods"] { background:white; color:black; }
+
+
+
+
+
+

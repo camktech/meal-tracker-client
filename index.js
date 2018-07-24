@@ -1,30 +1,13 @@
-$(document).ready(() => {
-  $('#fire').click(() => {
-    $.get(getUrl($('#action').val()), (data, status) => {
-      console.log(data)
-    });
-  });
-});
+const HOST = 'http://localhost:3000';
 
-function getUrl(action){
-  let params = ""
-  switch(action){
-    case 'food search':
-      params = "query=walnut&include_brands=false";
-      return "http://localhost:3000/nutrition/search_foods?" + params;
+function getLocalStorage(key){
+  localStorage.getItem(`meal-tracker-data-${key}`);
+}
 
-    case 'group list':
-      return "http://localhost:3000/nutrition/get_all_food_groups";
+function setLocalStorage(key, value){
+  localStorage.setItem(`meal-tracker-data-${key}`, value);
+}
 
-    case 'nutr list':
-      return "http://localhost:3000/nutrition/get_all_nutrients";
-
-    case 'by nutr':
-      params = "nutrient_id=204&subset=1";
-      return "http://localhost:3000/nutrition/get_foods_by_nutrient?" + params;
-
-    case 'food nutr':
-      params = "ndbno=05711&nutrients[]=203&nutrients[]=204";
-      return "http://localhost:3000/nutrition/show_food_nutrients?" + params;
-  }
+function notify(message, error = false){
+  
 }

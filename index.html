@@ -1,18 +1,30 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Mearl</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script type="text/javascript" src='./index.js'></script>
-</head>
-<body>
-  <select id="action">
-    <option value='food search'>food search</option>
-    <option value='group list'>group list</option>
-    <option value='nutr list'>nutr list</option>
-    <option value='by nutr'>by nutr</option>
-    <option value='food nutr'>food nutr</option>
-  </select>
-  <button id="fire">Fire</button>
-</body>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./lib/spapp.js"></script>
+    <script type="text/javascript" src="./lib/repeatable.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <a class='button' href="#sign-in">Sign In</a>
+      <a class='button' href="#sign-up">Sign Up</a>
+      <a class='button' href="#build-meal">Build Meal</a>
+      <a class='button' href="#meal-history">Meal History</a>
+      <a class='button' href="#find-foods">Find Foods</a>
+      <a class='logout button'>Log Out</a>
+    </nav>
+
+    <section id="sign-in" src='./views/sign-in.html' default></section>
+    <section id="sign-up" src='./views/sign-up.html'></section>
+    <section id="build-meal" src='./views/build-meal.html'></section>
+    <section id="meal-history" src='./views/meal-history.html'></section>
+    <section id="find-foods" src='./views/find-foods.html'></section>
+  </body>
+
 </html>
