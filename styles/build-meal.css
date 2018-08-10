@@ -1,0 +1,105 @@
+#search-state-container form{
+  margin-bottom: 0px;
+}
+
+#search-state-container form .instructions{
+  margin-bottom: 10px;
+}
+
+#food-search-results{
+  max-height: 300px;
+  overflow: scroll;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #eee;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.food-search-result, #meal-components .meal-component{
+  cursor: pointer;
+}
+
+.meal-component{
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.food-name-header, .food-group-header{
+  font-weight: bold;
+}
+
+.result-food-name, .result-food-group{
+  white-space: nowrap;
+  overflow: scroll;
+  padding-bottom: 5px;
+}
+
+#meal-components{
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.fa.fa-plus-circle{
+  margin-right: 15px;
+  margin-left: 5px;
+  color: #589058;
+}
+
+.fa.fa-times-circle{
+  color: #964444;
+}
+
+#meal-components .fa.fa-times-circle{
+  margin-right: 15px;
+}
+
+.instructions{
+  font-weight: bold;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+#food-component-reports{
+  margin-bottom: 20px;
+}
+
+.component-report{
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.food-measurement{
+  font-weight: bold;
+}
+
+.food-measurement-input{
+  width: 60px;
+}
+
+.component-report .fa-times-circle{
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.component-report .food-name{
+  white-space: nowrap;
+  overflow: scroll;
+  font-size: 22px;  
+}
+
+#save-container{
+  margin-top: 15px;
+}
+
+#date-input{
+  font-size: 14px;
+}
+
+#save-meal-button{
+  float: right;
+}

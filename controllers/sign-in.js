@@ -1,8 +1,9 @@
-window.app.page('sign-in', () => {
+$(document).ready(() => {
   var $email = $('#login-email');
   var $password = $('#login-password');
 
-  $('#sign-in-button').click(() => {
+  $('#sign-in-button').click((e) => {
+    e.preventDefault();
     signIn(buildUser($email.val(), $password.val()));
     $email.val(null);
     $password.val(null);
@@ -12,15 +13,18 @@ window.app.page('sign-in', () => {
 function signIn(user){
   $.post({
     url: `${HOST}/login`,
-    data: user
+    data: user,
+    xhrFields: {
+        withCredentials: true
+      }
   })
   .done((user) => {
     setLocalStorage('user', JSON.stringify(user));
-    // transition
-    // notify
+    transition('meal-history');
+    notify(`Welcome ${user.name}`);
   })
   .fail((data) => {
-    // notify
+    notify(data.responseJSON.error, true);
   });
 }
 

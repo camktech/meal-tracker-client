@@ -4,7 +4,11 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Tags-Input-Select-Box-selectize-js/selectize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="./lib/ejs.js"></script>
     <script type="text/javascript" src="./index.js"></script>
     <script type="text/javascript" src="./lib/spapp.js"></script>
     <script type="text/javascript" src="./lib/repeatable.js"></script>
@@ -20,11 +24,13 @@
       <a class='logout button'>Log Out</a>
     </nav>
 
-    <section id="sign-in" src='./views/sign-in.html' default></section>
-    <section id="sign-up" src='./views/sign-up.html'></section>
-    <section id="build-meal" src='./views/build-meal.html'></section>
-    <section id="meal-history" src='./views/meal-history.html'></section>
-    <section id="find-foods" src='./views/find-foods.html'></section>
+    <div id="alert" class="content"></div>
+
+    <section id="sign-in" class="content" src='./views/sign-in.html' default></section>
+    <section id="sign-up" class="content" src='./views/sign-up.html'></section>
+    <section id="build-meal" class="content" src='./views/build-meal.html'></section>
+    <section id="meal-history" class="content" src='./views/meal-history.html'></section>
+    <section id="find-foods" class="content" src='./views/find-foods.html'></section>
   </body>
 
 </html>

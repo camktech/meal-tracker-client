@@ -28,6 +28,37 @@ body.build-meal           > nav > a[href="#build-meal"],
 body.meal-history           > nav > a[href="#meal-history"],
 body.find-foods           > nav > a[href="#find-foods"] { background:white; color:black; }
 
+.content{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.hidden{
+  display: none;
+}
+
+.overflow-scroll{
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+#alert{
+  color: green;
+  height: 20px;
+}
+
+#alert.error{
+  color: red;
+}
+
+.button:{
+
+}
 
 
 

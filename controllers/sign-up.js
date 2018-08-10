@@ -1,9 +1,10 @@
-window.app.page('sign-up', () => {
+$(document).ready(() => {
   var $name = $('#new-user-name');
   var $email = $('#new-user-email');
   var $password = $('#new-user-password');
 
-  $('#create-account-button').click(() => {
+  $('#create-account-button').click((e) => {
+    e.preventDefault();
     createAccount(buildUser($name.val(), $email.val(), $password.val()));
     $name.val(null);
     $email.val(null);
@@ -14,15 +15,18 @@ window.app.page('sign-up', () => {
 function createAccount(user){
   $.post({
     url: `${HOST}/users`, 
-    data: user
+    data: user,
+    xhrFields: {
+      withCredentials: true
+    }
   })
   .done((user) => {
     setLocalStorage('user', JSON.stringify(user));
-    // transition
-    // notify
+    transition('build-meal');
+    notify(`Welcome ${user.name}`);
   })
   .fail((data) => {
-    // notify
+    notify(data.responseJSON.error, true);
   });
 }
 
@@ -32,5 +36,5 @@ function buildUser(name, email, password){
     email: email,
     password: password
   };
-  return JSON.stringify({user: user});
+  return {user: user};
 }

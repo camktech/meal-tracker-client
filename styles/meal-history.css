@@ -1,0 +1,13 @@
+.nutrition-summary{
+  margin-top: 15px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+
+.meal-date{
+  font-weight: bold;
+}

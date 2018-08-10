@@ -1,0 +1,80 @@
+<div id="search-state-container">
+  <div class="row">
+    <div class="twelve columns">
+      <form>
+        <label for="food-search-input" class="instructions">Search for foods included in your meal</label>
+        <div class="row">
+          <div class="ten columns">
+            <input id="food-search-input" class="u-full-width" type='text' placeholder='search' value="walnut">
+          </div>
+          <div class="two columns">
+            <button id='food-search-button' class='button'>Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div id="food-search-results-container" class="hidden">
+    <div class="row">
+      <p class="instructions">Select any food items consumed</p>
+    </div>
+    <!-- Search results -->
+    <div class="row">
+      <div class="seven columns">
+        <div id="food-search-results-header">
+          <div class="food-search-results-header">
+            <div class="row">
+              <div class="seven columns food-name-header">Name</div>
+              <div class="five columns food-group-header">Category</div>
+            </div>
+          </div>
+          <div id="food-search-results">
+            <div class="food-search-result row" data-result="{{JSON.stringify(this)}}">
+              <div class="seven columns result-food-name"><i class="fa fa-plus-circle" aria-hidden="true"></i>{{this.name}}</div>
+              <div class="five columns result-food-group">{{this.group}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- compiled food item list -->
+      <div id="meal-components-container" class="five columns hidden">
+        <p class="instructions">Meal Components</p>
+        <div id="meal-components">
+        </div>
+
+        <button id="add-to-meal-button" class="button">Add to Meal</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- Adjust serving amounts -->
+<div id="quantification-state-container" class="row hidden">
+  <div>
+    <p class="instructions">Adjust the portions/amount consumed</p>
+    <div id="food-component-reports">
+    </div>
+  </div>
+
+  <p class="instructions">Add meal to your history</p>
+  <div id="save-container" class="row">
+    <div class="six columns">
+      <form>
+        <label for="date-input">Date</label>
+        <input id="date-input" type="date">
+      </form>
+    </div>
+    <div class="six columns">
+      <button id='save-meal-button'>Save Meal</button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../controllers/build-meal.js"></script>
